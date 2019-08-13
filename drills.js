@@ -31,7 +31,7 @@ function isEven(value) {
     if (value % 2 == 0) {
         return true;
     }
-        return false;
+    return false;
 }
 
 // O(1) - constant time because there is only 1 input (value) and only 1 operation
@@ -78,8 +78,8 @@ function naiveSearch(array, item) {
 // TODO: What is the Big O of the following algorithm? Explain your answer
 function createPairs(arr) {
     for (let i = 0; i < arr.length; i++) {
-        for(let j = i + 1; j < arr.length; j++) {
-            console.log(arr[i] + ", " +  arr[j] );
+        for (let j = i + 1; j < arr.length; j++) {
+            console.log(arr[i] + ", " + arr[j]);
         }
     }
 }
@@ -157,6 +157,93 @@ function isWhat(n) {
 
 // The first conditional checks if inputed number is less than 2 or if its a whole number. The for loop checks to see if the inputed number is a prime number.
 // O(n) - Linear run time complexity. The for loop that iterates through each item once and only once.
+
+// ============== Iterative version ===================
+// TODO: Solve the drills 1 - 7 from your previous checkpoint (Recursion) iteratively.
+
+function countSheep(num) {
+    for (let i = num; i > 0; i--) {
+        if (i >= 1) {
+            console.log('Another sheep jump over the fence');
+        }
+    }
+    console.log('All sheep jumped over the fence');
+}
+
+// Linear, O(n)
+console.log(countSheep(3));
+
+function powerCalculator(baseInt, expInt) {
+    let result = baseInt;
+
+    for (let i = expInt; i > 1; i--) {
+        result *= baseInt;
+    }
+    return result;
+}
+// Linear, O(n)
+console.log(powerCalculator(10, 3));
+
+function reverseString(str) {
+    let result = '';
+    for (let i = 0; i < str.length; i++) {
+        // take last letter in string
+        result += str[str.length - i - 1];
+        // replace last letter with first letter
+
+    }
+    return result;
+}
+// Linear, O(n)
+console.log(reverseString('hello'));
+
+function TriangularNum(num) {
+    let sum = 0;
+    for (let i = 1; i <= num; i++) {
+        sum += i;
+        console.log(sum);
+    }
+    return sum;
+}
+// Linear, O(n)
+console.log(TriangularNum(5));
+
+function stringSplitter(str) {
+    let result = '';
+    for (let i = 0; i < str.length; i++) {
+        if (str[i] !== '/') {
+            result += str[i];
+        }
+    }
+    console.log(result);
+    return result;
+}
+// Linear, O(n)
+console.log(stringSplitter('02/20/2020'));
+
+function fibonacci(num) {
+    const numArr = [];
+    for (let i = 0; i < num; i++) {
+        if (!numArr.length) {
+            numArr.push(1);
+            numArr.push(i);
+        }
+        numArr.push(numArr[i + 1] + numArr[i]);
+    }
+    numArr.splice(0, 2);
+    console.log(numArr);
+}
+  // Linear, O(n)
+  console.log(fibonacci(7));
+
+
+// =============== Recursive Big O ====================
+// TODO: Take your solutions from the recursive exercises that you completed in the previous checkpoint and identify the time complexities (big O) of each of them.
+
+
+
+// ================ Iterative Big O =====================
+// TODO: Take your solutions from the iterative exercises today and identify the time complexities (big O) of each of them.
 
 
 
