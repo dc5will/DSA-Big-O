@@ -160,6 +160,8 @@ function isWhat(n) {
 
 // ============== Iterative version ===================
 // TODO: Solve the drills 1 - 7 from your previous checkpoint (Recursion) iteratively.
+// ================ Iterative Big O =====================
+// TODO: Take your solutions from the iterative exercises today and identify the time complexities (big O) of each of them.
 
 function countSheep(num) {
     for (let i = num; i > 0; i--) {
@@ -240,10 +242,20 @@ function fibonacci(num) {
 // =============== Recursive Big O ====================
 // TODO: Take your solutions from the recursive exercises that you completed in the previous checkpoint and identify the time complexities (big O) of each of them.
 
+/* 
+  Counting Sheep function - Linear, O(n)
+  Power Calculator function - Linear, O(n)
+  ReverseString function - Linear, O(n)
+  Triangular Number function - Linear, O(n)
+  String Splitter function - Linear, O(n)
+  Factorial function - Linear, O(n)
+  Fibonacci function - Linear, O(n)
+  Find Way Out of The Maze function - Linear, O(n)
+  Find ALL the ways out of the maze function - Linear, O(n)
+  Anagramsfunction - Organization Chart function - Linear, O(n)
+  binaryRep function - constant, O(1)
+*/
 
-
-// ================ Iterative Big O =====================
-// TODO: Take your solutions from the iterative exercises today and identify the time complexities (big O) of each of them.
 
 
 
